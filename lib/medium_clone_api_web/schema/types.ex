@@ -4,4 +4,5 @@ defmodule MediumCloneApiWeb.Schema.Types do
   alias MediumCloneApiWeb.Schema.Types
 
   import_types(Types.Usertype)
+  import_types(Types.SessionType)
 end
