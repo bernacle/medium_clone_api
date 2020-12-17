@@ -13,8 +13,8 @@ defmodule MediumCloneApi.Accounts.Session do
 
   defp check_password(user, args) do
     case user do
-      nil -> Argon2.dummy_checkpw()
-      _ -> Argon2.check_pass(args.password, user.password_hash)
+      nil -> Comeonin.Argon2.dummy_checkpw()
+      _ -> Argon2.verify_pass(args.password, user.password_hash)
     end
   end
 end
