@@ -3,6 +3,7 @@ defmodule MediumCloneApiWeb.Router do
 
   pipeline :api do
     plug(:accepts, ["json"])
+    plug(MediumCloneApiWeb.Plugs.Context)
   end
 
   scope "/api" do
